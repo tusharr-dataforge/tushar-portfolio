@@ -1,0 +1,54 @@
+
+/* Global reset and base styles */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #080b14;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #080b14;
+  color: #eef2ff;
+  font-family: 'DM Sans', sans-serif;
+}
+
+body, button, input, textarea {
+  font-family: 'DM Sans', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #72e6ff;
+  outline-offset: 4px;
+}
+
+::selection {
+  color: #080b14;
+  background: #72e6ff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
