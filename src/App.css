@@ -2079,3 +2079,82 @@ a.contact-social:hover {
     transition: none !important;
   }
 }
+
+
+
+/* ===== MOBILE RESPONSIVE FIX ===== */
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    padding: 40px 20px !important;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 11vw, 3.6rem) !important;
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .hero-visual,
+  .visual-core.portrait-core {
+    width: min(82vw, 340px) !important;
+    height: min(82vw, 340px) !important;
+    margin-inline: auto;
+  }
+
+  .hero-portrait {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .section {
+    padding: 60px 20px !important;
+  }
+
+  .projects-grid,
+  .skills-grid,
+  .education-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .navbar {
+    padding-inline: 16px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* ===== RESTORE FRAME ROTATION ===== */
+.visual-core.portrait-core .portrait-frame {
+  animation: frameRotate 10s linear infinite !important;
+}
+
+@keyframes frameRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
