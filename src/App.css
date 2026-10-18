@@ -1980,3 +1980,102 @@ a.contact-social:hover {
   opacity: 1 !important;
   border-color: rgba(0, 228, 255, 0.65) !important;
 }
+
+
+
+/* ===== MOBILE RESPONSIVE FIX ===== */
+
+@media (max-width: 700px) {
+  /* Prevent horizontal scrolling */
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Hero portrait */
+  .visual-core.portrait-core {
+    width: 100%;
+    max-width: 100%;
+    height: 480px !important;
+    min-height: 0 !important;
+    margin-inline: auto;
+    overflow: visible !important;
+  }
+
+  .portrait-core .hero-portrait {
+    left: 50% !important;
+    bottom: 0 !important;
+    height: 88% !important;
+    max-height: 430px !important;
+    max-width: 88% !important;
+    width: auto !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .portrait-core:hover .hero-portrait {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* Keep the frame inside the screen */
+  .portrait-core .portrait-frame {
+    inset: 5% 4%;
+  }
+
+  /* Don't show desktop hover text on mobile */
+  .portrait-core .identity-reveal {
+    display: none !important;
+  }
+
+  /* Keep content within the viewport */
+  img,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  /* Contact cards */
+  .contact-socials {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .contact-social {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .social-label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 400px) {
+  .visual-core.portrait-core {
+    height: 410px !important;
+  }
+
+  .portrait-core .hero-portrait {
+    height: 86% !important;
+    max-width: 92% !important;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .portrait-core .hero-portrait,
+  .portrait-core .portrait-frame,
+  .portrait-core .portrait-backlight {
+    transition: none !important;
+  }
+}
